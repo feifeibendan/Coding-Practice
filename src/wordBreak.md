@@ -1,4 +1,4 @@
-#### Validate Parentheses
+#### Word Break
 Leetcode question #139</br>
 
 Solution 1. Technique use: recusion
