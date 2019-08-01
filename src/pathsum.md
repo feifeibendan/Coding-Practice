@@ -1,5 +1,5 @@
 #### Path Sum
-Leetcode question #112, #113</br>
+Leetcode question #112, #113, #437</br>
 Technique use: DFS
 
 ##### Path sum I
@@ -33,6 +33,30 @@ class Solution {
         pathSum(root.left, sum, paths, stack);
         pathSum(root.right, sum, paths, stack);
         stack.pop();
+    }
+}
+```
+
+##### Path sum III
+```
+class Solution {
+    
+    int path = 0;
+    
+    public int pathSum(TreeNode root, int sum) {
+        if (root == null) return 0;
+        path(root, sum);
+        pathSum(root.left, sum);
+        pathSum(root.right, sum);
+        return path;
+    }
+    
+    public void path(TreeNode root, int sum) {
+        if (root == null) return;
+        sum -= root.val;
+        if (sum == 0) path++;
+        path(root.left, sum);
+        path(root.right, sum);
     }
 }
 ```
