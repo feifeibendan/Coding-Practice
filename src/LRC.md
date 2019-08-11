@@ -38,7 +38,7 @@ class LRUCache {
             this.map.put(key, node);
             
             if (this.map.size() > this.size) {
-                this.map.remove(tail.pre.key);
+                this.map.remove(tail.pre.key); //remove from map first before remore node
                 remove(tail.pre);
             }
         }
