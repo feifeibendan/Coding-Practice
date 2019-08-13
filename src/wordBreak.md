@@ -42,3 +42,29 @@ class Solution {
 }
 ```
 Time complexity is O(n^2). The space complexity is O(n)
+```
+/**
+String s = "leetcode";
+the outer loop
+""
+"l"
+"le"
+"lee"
+"leet"
+"leetc"
+"leetco"
+"leetcod"
+"leetcode"
+
+the inner loop
+""
+"l", ""
+"le", "e", ""
+"lee", "ee", "e", ""
+"leet", "eet", "et", "t", ""
+"leetc", "eetc", "etc", "tc", "c", ""
+"leetco", "eetco", "etco", "tco", "co", "o", ""
+"leetcod", "eetcod", "etcod", "tcod", "cod", "od", "d", ""
+"leetcode", "eetcode", "etcode", "tcode", "code", "ode", "de", "d", ""
+**/
+```
